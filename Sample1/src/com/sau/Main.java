@@ -27,7 +27,7 @@ public class Main {
     /**
      * Count even numbers in an array
      *
-     * @param theArray array to count zeros in
+     * @param theArray array to count even numbers in
      * @return the count of even numbers in theArray
      * @throws NullPointerException if theArray is null
      */
