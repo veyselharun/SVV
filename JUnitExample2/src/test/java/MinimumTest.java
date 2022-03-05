@@ -30,12 +30,16 @@ class MinimumTest {
     // Fail assertion
     @Test
     void nullList1() {
+
         list = null;
+        // list.add("cat");
+
         try {
             Minimum.findMin(list);
         } catch (NullPointerException e) {
             return;
         }
+
         fail("NullPointerException expected");
     }
 
@@ -80,13 +84,14 @@ class MinimumTest {
     void nullFirstElement() {
 
         // Other elements may also be Null. They should also be checked.
-        list.add (null);
-        list.add ("cat");
+        list.add(null);
+        list.add("cat");
 
         Exception exception = assertThrows(
-                NullPointerException.class, () ->
-                Minimum.findMin(list));
-        assertEquals("NullPointer Exception", exception.getMessage());
+                NullPointerException.class,
+                () -> Minimum.findMin(list));
+
+        assertEquals("NullPointer Exception. The first element is null.", exception.getMessage());
     }
 
 
@@ -96,8 +101,8 @@ class MinimumTest {
     void nullSecondElement() {
 
         // Other elements may also be Null. They should also be checked.
-        list.add ("cat");
-        list.add (null);
+        list.add("cat");
+        list.add(null);
 
         Exception exception = assertThrows(
                 NullPointerException.class,
@@ -113,14 +118,14 @@ class MinimumTest {
     @Test
     void singleNullElement() {
 
-        list.add (null);
+        list.add(null);
 
         Exception exception = assertThrows(
                 NullPointerException.class,
                 () -> Minimum.findMin(list)
         );
 
-        assertEquals("NullPointer Exception.  The first element is null.", exception.getMessage());
+        assertEquals("NullPointer Exception. The first element is null.", exception.getMessage());
     }
 
 
@@ -148,7 +153,7 @@ class MinimumTest {
     @Test
     void singleElementList() {
 
-        list.add ("cat");
+        list.add("cat");
 
         Object obj = Minimum.findMin(list);
         assertTrue(obj.equals("cat"), "The list must contain single element but does not.");
@@ -161,8 +166,8 @@ class MinimumTest {
     @Test
     void doubleElementList() {
 
-        list.add ("dog");
-        list.add ("cat");
+        list.add("dog");
+        list.add("cat");
 
         Object obj = Minimum.findMin(list);
         assertTrue(obj.equals("cat"), "The list must contain two elements but does not.");

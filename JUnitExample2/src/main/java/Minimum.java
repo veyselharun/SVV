@@ -17,7 +17,7 @@ public class Minimum {
     public static <T extends Comparable<? super T>> T findMin (List<? extends T> list) {
 
         if (list == null) {
-            //throw new IllegalPointerException("NullPointer Exception");
+            // throw new IllegalArgumentException("IllegalArgumentException Exception. List is null.");
             throw new NullPointerException("NullPointer Exception. The list is null.");
         }
 
