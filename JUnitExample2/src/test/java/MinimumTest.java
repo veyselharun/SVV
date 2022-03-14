@@ -31,7 +31,7 @@ class MinimumTest {
     @Test
     void nullList1() {
 
-        list = null;
+        // list = null;
         // list.add("cat");
 
         try {
@@ -92,6 +92,7 @@ class MinimumTest {
                 () -> Minimum.findMin(list));
 
         assertEquals("NullPointer Exception. The first element is null.", exception.getMessage());
+
     }
 
 
