@@ -4,7 +4,6 @@ import java.util.List;
 
 public class Minimum {
 
-
     /**
      * Returns the mininum element in a list
      * @param list Comparable list of elements to search

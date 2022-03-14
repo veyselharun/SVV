@@ -92,7 +92,6 @@ class MinimumTest {
                 () -> Minimum.findMin(list));
 
         assertEquals("NullPointer Exception. The first element is null.", exception.getMessage());
-
     }
 
 

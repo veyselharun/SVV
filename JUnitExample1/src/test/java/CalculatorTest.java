@@ -16,6 +16,8 @@ class CalculatorTest {
 
     @Test
     void add() {
-        assertEquals(10, Calculator.add(3, 7), "Sum is incorrect");
+
+        assertEquals(10, Calculator.add(3, 7),
+                "Sum is incorrect");
     }
 }
