@@ -36,7 +36,7 @@ class CalculatorTest {
     void dataDrivenAdd(int a, int b, int expectedValue) {
 
         assertEquals(expectedValue, Calculator.add(a, b),
-                "The result of Caculcator.add method is incorrect.");
+                "The result of Calculator.add method is incorrect.");
 
     }
 
