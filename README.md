@@ -1,3 +1,3 @@
 # SoftwareVerificationAndValidation
 
-Notes and sample applications of Software Verification and Validation course.
+Software Verification and Validation course materials.
