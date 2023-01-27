@@ -38,9 +38,28 @@ fun main(args: Array<String>) {
 fun countEvenNumbers(myArray: IntArray): Int {
     var count: Int = 0
 
-    // Error: myArrayLength must be myArrraySize - 1
+    // Fault: myArrayLength must be myArrraySize - 1
     val myArrayLength: Int = myArray.size - 2
 
+    // For both of the test cases the fault results with an
+    // error, incorrect program state at this point.
+    // Error: myArrayLength must be 2 not 1.
+    // Program State of this error:
+    // Program counter (PC) = i = 0
+    // count = 0
+    // myArrayLength = 1 (Must be 2)
+
+    // For the first test case the program produces the expected output.
+    // There is no failure.
+    // Error did not result with failure. It did not propagate to the
+    // value of even number count.
+    // count = 1 -> Expected value 1, actual value 1
+
+    // For the second test case the program does produce the expected output.
+    // There is failure.
+    // Error resulted with failure. It propagated to the
+    // value of even number count.
+    // count = 1 -> Expected value 2, actual value 1
     for (i in 0..myArrayLength) {
         if (myArray[i] % 2 == 0) {
             // The value is even
