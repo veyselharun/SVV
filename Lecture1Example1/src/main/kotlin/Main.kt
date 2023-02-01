@@ -1,10 +1,15 @@
+/*
+ * Fault, Error, Failure
+ * Kotlin example of software fault, error, and failure concepts.
+ */
+
 fun main(args: Array<String>) {
 
     // First test case
     // Fault does not result with failure
     val myArray1: IntArray = intArrayOf(5, 2, 3)
 
-    print("Values of the array:")
+    print("Values of the first array:")
     for (i in myArray1.indices) {
         print(" " + myArray1[i] + " ")
     }
@@ -18,7 +23,7 @@ fun main(args: Array<String>) {
     // Fault results with failure
     val myArray2: IntArray = intArrayOf(5, 2, 4)
 
-    print("Values of the array:")
+    print("Values of the second array:")
     for (i in myArray1.indices) {
         print(" " + myArray2[i] + " ")
     }
