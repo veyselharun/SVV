@@ -1,5 +1,5 @@
 /*
- * Fault, Error, Failure
+ * Fault, Error, Failure Example
  * Kotlin example of software fault, error, and failure concepts.
  */
 
