@@ -16,7 +16,7 @@ fun main(args: Array<String>) {
 
     // Second test case
     // Fault results with failure
-    val myArray2: IntArray = intArrayOf(5, 2, 4)
+    val myArray2: IntArray = intArrayOf(4, 8, 5)
 
     print("Values of the array:")
     for (i in myArray1.indices) {
@@ -38,16 +38,15 @@ fun main(args: Array<String>) {
 fun countEvenNumbers(myArray: IntArray): Int {
     var count: Int = 0
 
-    // Fault: myArrayLength must be myArrraySize - 1
-    val myArrayLength: Int = myArray.size - 2
+    val myArrayLength: Int = myArray.size - 1
 
     // For both of the test cases the fault results with an
     // error, incorrect program state at this point.
-    // Error: myArrayLength must be 2 not 1.
+    // Error: i must be 0 not 1 in the first iteration.
     // Program State of this error:
-    // Program counter (PC) = i = 0
+    // Program counter (PC) = i < myArrayLength
+    // i = 1 (must be 0 in the first iteration)
     // count = 0
-    // myArrayLength = 1 (Must be 2)
 
     // For the first test case the program produces the expected output.
     // There is no failure.
@@ -60,7 +59,9 @@ fun countEvenNumbers(myArray: IntArray): Int {
     // Error resulted with failure. It propagated to the
     // value of even number count.
     // count = 1 -> Expected value 2, actual value 1
-    for (i in 0..myArrayLength) {
+
+    // Fault: i must start from 0 not 1
+    for (i in 1..myArrayLength) {
         if (myArray[i] % 2 == 0) {
             // The value is even
             count++
