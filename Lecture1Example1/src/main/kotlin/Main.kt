@@ -60,6 +60,7 @@ fun countEvenNumbers(myArray: IntArray): Int {
      * Program counter (PC) = i < myArrayLength
      * i = 1 (must be 0 in the first iteration)
      * count = 0
+     * myArrayLength = 2
      *
      * For the first test case the program produces the expected output.
      * There is no failure.
@@ -67,7 +68,7 @@ fun countEvenNumbers(myArray: IntArray): Int {
      * value of even number count.
      * count = 1 -> Expected value 1, actual value 1
      *
-     * For the second test case the program does produce the expected output.
+     * For the second test case the program does not produce the expected output.
      * There is failure.
      * Error resulted with failure. It propagated to the
      * value of even number count.

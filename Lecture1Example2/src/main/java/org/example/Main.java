@@ -9,8 +9,9 @@ public class Main {
 
     // Before running add the following command line arguments to the run configuration.
     // Run -> Edit Configurations
-    // Sample command line argument: Even 5 0 7
     // Sample command line argument: Odd 3 7 2
+    // Sample command line argument: Even 5 2 3
+    // Sample command line argument: Even 4 8 9
     public static void main(String[] args) {
 
         String lookFor = args[0];
