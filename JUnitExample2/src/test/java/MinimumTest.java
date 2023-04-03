@@ -1,5 +1,6 @@
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -26,28 +27,15 @@ class MinimumTest {
     void tearDown() { list = null; }
 
 
-    // Test null list
-    // Fail assertion
+    /**
+     * Test null list.
+     * Uses assertThrows and assertEquals.
+     * To check the functionality, update the exception throw statements in
+     * Minimum.java list null check conditional.
+     */
     @Test
-    void nullList1() {
-
-        // list = null;
-        // list.add("cat");
-
-        try {
-            Minimum.findMin(list);
-        } catch (NullPointerException e) {
-            return;
-        }
-
-        fail("NullPointerException expected");
-    }
-
-
-    // Test null list
-    // assertThrows
-    @Test
-    void nullList2() {
+    @DisplayName("Null List Test")
+    void nullList() {
 
         list = null;
 
@@ -62,9 +50,12 @@ class MinimumTest {
     }
 
 
-    // Test empty list
-    // assertThrows
+    /**
+     * Test empty list.
+     * Uses assertThrows and assertEquals.
+     */
     @Test
+    @DisplayName("Empty List Test")
     void emptyList() {
 
         Exception exception = assertThrows(
@@ -78,9 +69,12 @@ class MinimumTest {
     }
 
 
-    // Test null first element
-    // assertThrows
+    /**
+     * Test null first element.
+     * Uses assertThrows and assertEquals.
+     */
     @Test
+    @DisplayName("Null First Element Test")
     void nullFirstElement() {
 
         // Other elements may also be Null. They should also be checked.
@@ -95,9 +89,12 @@ class MinimumTest {
     }
 
 
-    // Test null second element
-    // assertThrows
+    /**
+     * Test null second element.
+     * Uses assertThrows.
+     */
     @Test
+    @DisplayName("Null Second Element Test")
     void nullSecondElement() {
 
         // Other elements may also be Null. They should also be checked.
@@ -113,9 +110,12 @@ class MinimumTest {
     }
 
 
-    // Test only one null element.
-    // assertThrows
+    /**
+     * Test single null element list.
+     * Uses assertThrows and assertEquals.
+     */
     @Test
+    @DisplayName("Single Null Element List Test")
     void singleNullElement() {
 
         list.add(null);
@@ -128,10 +128,12 @@ class MinimumTest {
         assertEquals("NullPointer Exception. The first element is null.", exception.getMessage());
     }
 
-
-    // Test incomparable elements.
-    // assertThrows
+    /**
+     * Test incomparable elements.
+     * Uses assertThrows.
+     */
     @Test
+    @DisplayName("Incomparable Elements Test")
     void mutuallyIncomparable() {
 
         List list = new ArrayList();
@@ -148,9 +150,12 @@ class MinimumTest {
     }
 
 
-    // Test single element list.
-    // assertTrue
+    /**
+     * Test single element list.
+     * Uses assertTrue.
+     */
     @Test
+    @DisplayName("Single Element List Test")
     void singleElementList() {
 
         list.add("cat");
@@ -161,8 +166,10 @@ class MinimumTest {
     }
 
 
-    // Test double element list.
-    // assertTrue
+    /**
+     * Test double element list.
+     * Uses assertTrue.
+     */
     @Test
     void doubleElementList() {
 

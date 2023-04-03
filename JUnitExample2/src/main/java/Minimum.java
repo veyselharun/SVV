@@ -16,6 +16,7 @@ public class Minimum {
     public static <T extends Comparable<? super T>> T findMin (List<? extends T> list) {
 
         if (list == null) {
+            // For null pointer exception check.
             // throw new IllegalArgumentException("IllegalArgumentException Exception. List is null.");
             throw new NullPointerException("NullPointer Exception. The list is null.");
         }
@@ -24,8 +25,10 @@ public class Minimum {
             throw new IllegalArgumentException("IllegalArgument Exception. The list is empty.");
         }
 
+
         Iterator<? extends T> itr = list.iterator();
         T result = itr.next();
+
 
         // Other elements may also be Null. They should also be checked.
         if (result == null) throw new NullPointerException("NullPointer Exception. The first element is null.");

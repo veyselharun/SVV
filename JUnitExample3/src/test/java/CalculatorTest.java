@@ -8,29 +8,32 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class CalculatorTest {
 
-    // ParameterizedTest <-> Data-Driven Test
-    // @ValueSource
-    // @EnumSource
-    // @MethodSource
-    // @CsvSource
-    // @CsvFileSource
-    // @ArgumentSource
-
-
-    // Note: @ParameterizedTest needs 'org.junit.jupiter:junit-jupiter-params:5.8.2' artifact.
-    // Add this to the implementation section in build.gradle file.
-
-
     @BeforeEach
     void setUp() {
     }
-
 
     @AfterEach
     void tearDown() {
     }
 
 
+    /**
+     * Parameterized Test <-> Data-Driven Test
+     * Parameterized test annotations:
+     * - @ValueSource
+     * - @EnumSource
+     * - @MethodSource
+     * - @CsvSource
+     * - @CsvFileSource
+     * - @ArgumentSource
+     *
+     * Parameterized test needs 'org.junit.jupiter:junit-jupiter-params:5.8.2' artifact.
+     * Need to add the package in the build.gradle file.
+     *
+     * @param a
+     * @param b
+     * @param expectedValue
+     */
     @ParameterizedTest
     @CsvSource({"3, 5, 8", "1, 4, 5"})
     void dataDrivenAdd(int a, int b, int expectedValue) {
