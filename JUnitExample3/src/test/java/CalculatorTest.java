@@ -37,9 +37,12 @@ class CalculatorTest {
     @ParameterizedTest
     @CsvSource({"3, 5, 8", "1, 4, 5"})
     void dataDrivenAdd(int a, int b, int expectedValue) {
-
-        assertEquals(expectedValue, Calculator.add(a, b),
+        Calculator calculator = new Calculator();
+        assertEquals(expectedValue, calculator.add(a, b),
                 "The result of Calculator.add method is incorrect.");
+
+        //assertEquals(expectedValue, Calculator.add(a, b),
+        //        "The result of Calculator.add method is incorrect.");
 
     }
 
